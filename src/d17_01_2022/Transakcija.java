@@ -83,6 +83,7 @@ public class Transakcija {
 	public void prenosSredstva(double vrednost) {
 		
 		if(this.getPosaljilac().getStanjeNaRacunu() >= vrednost) {
+			
 			this.getPosaljilac().novoStanjeNaRacunu(vrednost + provizija(vrednost));
 			this.getPrimalac().novoStanjeNaRacunu(-vrednost);
 		}
@@ -91,11 +92,7 @@ public class Transakcija {
 		}
 	}
 	
-	
-	
-	
-	
-	
+
 
 //	metodu koja stampa podatke o transakciji u formatu:
 //	id transkacije
@@ -106,13 +103,9 @@ public class Transakcija {
 		System.out.println(this.idTransakcije);
 		System.out.println("Racun sa: " + this.posaljilac.getImePrezime() + " - " + getPosaljilac().getBrojRacuna());
 		System.out.println("Racun na: " + this.primalac.getImePrezime() + " - " + getPrimalac().getBrojRacuna());
-		
-		
+	
 		
 	}
-	
-	
-	
 	
 	
 	
