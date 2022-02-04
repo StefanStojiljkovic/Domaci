@@ -29,10 +29,10 @@ public class Zadatak2 {
 			driver.manage().window().maximize();
 			driver.get("https://www.wikipedia.org/");
 
-			List<WebElement> langs = driver.findElements(By.xpath("//*[@class = 'central-featured']/div/a"));
+			List<WebElement> link = driver.findElements(By.xpath("//*[@class = 'central-featured']/div/a"));
 
-			for (int i = 0; i < langs.size(); i++) {
-				js.executeScript("window.open(arguments[0])", langs.get(i));
+			for (int i = 0; i < link.size(); i++) {
+				js.executeScript("window.open(arguments[0])", link.get(i));
 			}
 		}		
 	}
