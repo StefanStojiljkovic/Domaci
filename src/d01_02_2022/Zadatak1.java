@@ -29,6 +29,10 @@ public class Zadatak1 {
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@id='u24-modal--5']/following :: div[@role='dialog']")));
 		
+		
+		
+		
+		
 		driver.close();
 
 	}
